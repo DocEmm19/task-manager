@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tasks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- First-run setup: URL + passcode captured here, stored only in localStorage -->
+  <section id="setup" hidden>
+    <h1>Set up</h1>
+    <label>Web App URL <input id="setup-url" type="url" placeholder="https://script.google.com/macros/s/.../exec"></label>
+    <label>Passcode <input id="setup-pass" type="password"></label>
+    <button id="setup-save">Save</button>
+    <p class="hint">Stored only on this device. Never uploaded to the code.</p>
+  </section>
+
+  <main id="app" hidden>
+    <header>
+      <input id="capture" type="text" autocomplete="off" placeholder="Add a task…  (#project !p1 fri, every weekday, * to pin)">
+      <div id="preview" class="preview"></div>
+      <ul id="project-suggest" class="suggest" hidden></ul>
+      <span id="sync-badge" class="badge">synced</span>
+    </header>
+    <nav id="views"></nav>
+    <ul id="list"></ul>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

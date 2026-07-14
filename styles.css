@@ -1,0 +1,27 @@
+:root { --p1:#e5484d; --p2:#f76b15; --p3:#8b8d98; --line:#e6e6ea; --muted:#6b6f76; --accent:#3b5bdb; }
+* { box-sizing: border-box; }
+body { margin:0; font:16px/1.4 system-ui, -apple-system, sans-serif; color:#1a1a1e; }
+#setup, #app { max-width: 720px; margin: 0 auto; padding: 16px; }
+#setup label { display:block; margin:12px 0; }
+#setup input { width:100%; padding:10px; font-size:16px; }
+header { position: sticky; top:0; background:#fff; padding:12px 0; border-bottom:1px solid var(--line); z-index:2; }
+#capture { width:100%; padding:14px; font-size:17px; border:1px solid var(--line); border-radius:10px; }
+.preview { min-height:18px; font-size:13px; color:var(--muted); padding:4px 2px; }
+.suggest { list-style:none; margin:0; padding:0; border:1px solid var(--line); border-radius:8px; }
+.suggest li { padding:8px 12px; cursor:pointer; } .suggest li:hover { background:#f2f4ff; }
+.badge { font-size:12px; color:var(--muted); }
+.badge.pending { color:var(--p2); } .badge.error { color:var(--p1); }
+#views { display:flex; gap:8px; overflow-x:auto; padding:10px 0; }
+#views button { border:1px solid var(--line); background:#fff; border-radius:999px; padding:6px 14px; white-space:nowrap; }
+#views button.active { background:var(--accent); color:#fff; border-color:var(--accent); }
+#list { list-style:none; margin:0; padding:0; }
+.task { display:flex; align-items:flex-start; gap:10px; padding:12px 4px; border-bottom:1px solid var(--line); }
+.task .check { width:22px; height:22px; flex:0 0 auto; }
+.task .title { flex:1; }
+.task .chip { font-size:12px; color:var(--muted); background:#f2f2f5; border-radius:6px; padding:1px 6px; margin-left:6px; }
+.task .dot { width:8px; height:8px; border-radius:50%; display:inline-block; margin-left:6px; }
+.dot.P1{background:var(--p1)} .dot.P2{background:var(--p2)} .dot.P3{background:var(--p3)}
+.task .due { font-size:13px; color:var(--muted); } .task .due.overdue { color:var(--p1); font-weight:600; }
+.overdue-header { padding:10px 4px; color:var(--p1); cursor:pointer; font-weight:600; }
+.top3 { background:#f7f9ff; border-radius:10px; padding:6px 8px; margin:8px 0; }
+.expand { padding:8px 0 8px 32px; } .expand textarea { width:100%; }
